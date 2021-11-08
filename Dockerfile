@@ -2,6 +2,7 @@
 # a little overkill but need it to install dot cli for dtreeviz
 FROM ubuntu:18.04
 
+
 # ubuntu installing - python, pip, graphviz, nano, libpq (for psycopg2)
 RUN apt-get update &&\
     apt-get install python3.7 -y &&\
@@ -18,6 +19,9 @@ WORKDIR /streamlit-docker
 COPY requirements.txt ./requirements.txt
 
 # install pip then packages
+RUN pip3 install -U --force-reinstall pip
+
+
 RUN pip3 install -r requirements.txt
 
 # copying all files over

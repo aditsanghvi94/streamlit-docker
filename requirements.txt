@@ -2,4 +2,6 @@ streamlit==0.51.0
 numpy==1.18.1
 pandas==1.0.0
 scikit-learn==0.22.1
+graphviz==0.16
 dtreeviz==0.6
+
